@@ -23,3 +23,5 @@ r = requests.post(url, data, auth=(user, password))
 
 assert r.status_code == 201, 'Error: repo create failed'
 
+print "Repository ",repo," successfully created."
+
