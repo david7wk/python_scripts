@@ -13,7 +13,9 @@ r = requests.get(url)
 
 assert r.status_code == 200, 'Error: repo listing failed'
 
-
+print
+print('{0:10s} {1:20s} {2:25s}'.format('Language','Repo Name','Description'))
+print('{0:10s} {1:20s} {2:25s}'.format(10*'-', 20*'-', 25*'-'))
 for repo in r.json():
-    print('[{language}] {name} {description}'.format(language=repo['language'],
+    print('{language:10s} {name:20s} {description:25s}'.format(language=repo['language'],
                             name=repo['name'],description=repo['description']))
