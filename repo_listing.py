@@ -11,7 +11,7 @@ url = 'https://api.github.com/users/' + user + '/repos'
 
 r = requests.get(url)
 
-assert r.status_code == 200
+assert r.status_code == 200, 'Error: repo listing failed'
 
 
 for repo in r.json():
