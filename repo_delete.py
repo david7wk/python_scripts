@@ -16,4 +16,5 @@ r = requests.delete(url, auth=(user, password))
 
 assert r.status_code == 204, 'Error: repo not deleted'
 
+print
 print "Repository ",repo," successfully deleted."
