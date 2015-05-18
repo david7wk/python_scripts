@@ -21,6 +21,5 @@ data = json.dumps(repo_info)
 
 r = requests.post(url, data, auth=(user, password))
 
-assert r.status_code == 201
+assert r.status_code == 201, 'Error: repo create failed'
 
-print r.json()
